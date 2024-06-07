@@ -1,6 +1,7 @@
 import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
+import Todos from './components/Todos';  // Lalukan Import
 import './App.css'
 
 const DUMMY = [
@@ -29,9 +30,10 @@ console.log(todos);
   return (
     <div className="App">
       <h1>My Todo List</h1>
-      {todos.map((todo) => {
+      {/* {todos.map((todo) => {
         return <p key={todo.id}>{todo.title}</p>
-      })}
+      })} */}
+      <Todos todos={todos}/> {/* Menampilkan component Todos */}
     </div>
   )
 
