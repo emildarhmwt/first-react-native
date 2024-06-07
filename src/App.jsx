@@ -39,6 +39,7 @@ const styles = {
   container: {
     textAlign: 'center',
     padding: '12px',
+    width: '1000px',
   },
   title: {
     fontSize: '36px',
