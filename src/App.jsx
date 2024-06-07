@@ -71,6 +71,5 @@ const styles = {
   //     </p>
   //   </>
   // )
-}
 
 export default App
