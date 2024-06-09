@@ -1,21 +1,27 @@
-import React from 'react'
-import TodoItem from './TodoItem' // Lakukan import
+import TodoItem from "./TodoItem";
 
-const Todos = ({ todos }) => {
+function Todos({ todos, toggleCompleted, deleteTodo }) {
   return (
     <div style={styles.container}>
-      {todos.map((todo) => {
-        return <TodoItem key={todo.id} todo={todo} />
-      })}
+      {todos.map((todo) => (
+        <TodoItem
+          completed={todo.completed}
+          title={todo.title}
+          key={todo.id}
+          id={todo.id}
+          toggleCompleted={toggleCompleted}
+          deleteTodo={deleteTodo}
+        />
+      ))}
     </div>
-  )
+  );
 }
 
 const styles = {
   container: {
-    width: '40%',
-    margin: '0 auto',
+    width: "40%",
+    margin: "0 auto",
   },
-}
+};
 
-export default Todos
+export default Todos;
